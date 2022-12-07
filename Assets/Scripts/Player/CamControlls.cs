@@ -8,14 +8,6 @@ public class CamControlls : MonoBehaviour
 
     private Vector3 _position;
 
-    private void Awake()
-    {
-        if (_player == null)
-        {
-            _player = FindObjectOfType<PlayerEnity>().transform;
-        }
-    }
-
     private void Update()
     {
         _position = _player.position;

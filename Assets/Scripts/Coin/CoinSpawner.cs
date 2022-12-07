@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CoinSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _coinPrefabs;
+    [SerializeField] private Coin _coinPrefabs;
     [SerializeField] private float _direction = 2f;
     [SerializeField] private int _countCoinOnPlatform = 5;
 

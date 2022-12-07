@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
 
         if (player)
         {
-            player.GetDamage();
+            player.TakeDamage();
         }
     }
 

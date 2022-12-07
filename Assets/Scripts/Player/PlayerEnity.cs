@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(Rigidbody2D))]
+
 public class PlayerEnity : MonoBehaviour
 {
     [SerializeField] private int _hp = 3;
@@ -15,7 +17,7 @@ public class PlayerEnity : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    public void GetDamage()
+    public void TakeDamage()
     {
         _hp--;
 
@@ -23,7 +25,7 @@ public class PlayerEnity : MonoBehaviour
 
         Debug.Log("HP : " + _hp);
 
-        if (_hp < 1)
+        if (_hp <= 0)
         {
             Die();
         }

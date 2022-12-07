@@ -8,15 +8,15 @@ public class CoinPicker : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Coin")
+        if (collision.GetComponent<Coin>())
         {   
-            GetPoint();
+            CollectPoint();
 
             Destroy(collision.gameObject);
         }
     }
 
-    public void GetPoint()
+    public void CollectPoint()
     {
         _point++;
 
